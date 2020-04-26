@@ -1,2 +1,0 @@
-
-document.getElementById('clock').innerHTML = ;
