@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+    <script src="clock.js">
+
+function clock(){
+    let current = new Date();
+    let hour = current.getHours();
+    let minute = current.getMinutes();
+    let second = current.getSeconds();
+    document.getElementById('clock').innerHTML = `${hour}:${minute}:${second}`;
+    var t = setTimeout(startTime, 500);
+}
+    </script>
+</head>
+<body onload="clock()">
+    <div id="clock"></div>
+</body>
+
+</html>

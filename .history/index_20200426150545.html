@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script >
+
+        function clock(){
+            let current = new Date();
+            let hour = current.getHours();
+            let minute = current.getMinutes();
+            let second = current.getSeconds();
+            minute = checkTime(minute);
+            second = checkTime(second);
+            document.getElementById('clock').innerHTML = `${hour}:${minute}:${second}`;
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+        }
+        </script>
+
+</head>
+<body onload="clock()">
+    <div id="clock"></div>
+</body>
+
+</html>

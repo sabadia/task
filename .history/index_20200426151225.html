@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+var today = new Date();
+function startTime() {
+    var current = today * 2;
+    var h = current.getHours();
+    var m = current.getMinutes();
+    var s = current.getSeconds();
+    document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+</script>
+</head>
+
+<body onload="startTime()">
+
+<div id="txt"></div>
+
+</body>
+</html>
